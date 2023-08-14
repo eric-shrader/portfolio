@@ -1,18 +1,41 @@
 import Loader from 'react-loaders'
 import AnimatedLetters from './../AnimatedLetters'
-import { useEffect, useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
+import emailjs from '@emailjs/browser'
 
 //style
 import './index.scss'
 
 const Contact = () => {
   const [letterClass, setLetterClass] = useState('text-animate')
+  const refForm = useRef()
 
   useEffect(() => {
     setTimeout(() => {
       setLetterClass('text-animate-hover')
     }, 3000)
   }, [])
+
+  const sendEmail = (e) => {
+    e.preventDefault()
+
+    emailjs
+      .sendForm(
+        'contact_service',
+        'contact_form',
+        refForm.current,
+        'MYwfw60MZWRflalz9'
+      )
+      .then(
+        () => {
+          alert('Message successfully sent!')
+          window.location.reload(false)
+        },
+        () => {
+          alert('Failed to send the message, please try again')
+        }
+      )
+  }
 
   return (
     <>
@@ -31,38 +54,23 @@ const Contact = () => {
             questions, don't hesitate to contact me using the form below.
           </p>
           <div className="contact-form">
-            <form>
-              <ul>
-                <li className="half">
-                  <input type="text" name="name" placeholder="Name" required />
-                </li>
-                <li className="half">
-                  <input
-                    type="email"
-                    name="email"
-                    placeholder="Email"
-                    required
-                  />
-                </li>
-                <li>
-                  <input
-                    type="text"
-                    name="subject"
-                    placeholder="Subject"
-                    required
-                  />
-                </li>
-                <li>
-                  <textarea
-                    placeholder="Message"
-                    name="message"
-                    required
-                  ></textarea>
-                </li>
-                <li>
-                  <input type="submit" className="flat-button" value="SEND" />
-                </li>
-              </ul>
+            <form ref={refForm} onSubmit={sendEmail}>
+              <div className="form-grid">
+                <input type="text" name="name" placeholder="Name" required />
+                <input type="email" name="email" placeholder="Email" required />
+                <input
+                  type="text"
+                  name="subject"
+                  placeholder="Subject"
+                  required
+                />
+                <textarea
+                  placeholder="Message"
+                  name="message"
+                  required
+                ></textarea>
+              </div>
+              <input type="submit" className="flat-button" value="SEND" />
             </form>
           </div>
         </div>
