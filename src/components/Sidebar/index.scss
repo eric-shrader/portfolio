@@ -4,8 +4,11 @@
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
+    position: sticky;
+    top: 0px;
+    right: 0px;
     background: #181818;
-    height: 100%;
+    height: 100vh;
     margin: 0;
     padding: 0;
 }
@@ -21,7 +24,7 @@
         text-align: center;
         text-decoration: none;
         width: 100%;
-        color: lightblue;
+        color: rgb(173, 216, 230);
 
         &:hover {
             color: #ffd700;

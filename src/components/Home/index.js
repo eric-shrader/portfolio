@@ -38,7 +38,7 @@ const Home = () => {
   return (
     <>
       <div className="container home-page">
-        <div className="right-side-container">
+        <div className="left-side-container">
           <div className="text-zone">
             <h1>
               <span className={letterClass}>H</span>

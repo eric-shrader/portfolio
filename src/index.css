@@ -8,12 +8,12 @@ body {
   font: 300 11px/1.4 'Helvetica Neue', sans-serif;
   color: #444;
   background: #022c43;
-  overflow: hidden;
+  /* overflow: hidden; */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-@media (max-height: 900px) or (max-width: 800px) {
+@media (max-height: 400px) or (max-width: 800px) {
   body {
     overflow: auto;
   }
