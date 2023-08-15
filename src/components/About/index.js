@@ -35,7 +35,7 @@ const About = () => {
           </h1>
           <p>
             I'm a very ambitious full stack developer looking for a role in
-            established IT companies or start up companies looking to make a
+            established IT companies or start-up companies looking to make a
             positive impact on the world. I would love the oportunity to work
             with the latest technologies on challenging and diverse projects.
           </p>

@@ -76,24 +76,25 @@ const Contact = () => {
           </div>
         </div>
         <div className="info-map">
-          Eric Shrader,
-          <br />
-          United States,
-          <br />
-          <br />
+          <span className="name">Eric Shrader</span>
+          <br /> <br />
           88 Kessel Ct <br />
-          Madison <br />
-          <span>ericshrader101@gmail.com</span>
+          Madison, Wisconsin 53711
+          <br />
+          Apartment 25 <br /> <br />
+          CDT - Central Daylight Time <br />
+          <span className="email">ericshrader101@gmail.com</span>
         </div>
       </div>
       <div className="map-wrap">
         <MapContainer
           center={[43.04936899680399, -89.48207538803734]}
           zoom={13}
+          scrollWheelZoom={true}
         >
           <TileLayer url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" />
           <Marker position={[43.04936899680399, -89.48207538803734]}>
-            <Popup>Eric lives here, come over for a cup of coffee :)</Popup>
+            <Popup>Eric lives here, come over for a cup of coffee</Popup>
           </Marker>
         </MapContainer>
       </div>
