@@ -114,6 +114,14 @@
 }
 
 @media (max-width: 600px) {
+
+    .app {
+        display: grid;
+        grid-template-columns: 40px auto;
+        width: 100%;
+        min-height: 100%;
+    }
+
     .right-side-container {
         display: none;
     }
