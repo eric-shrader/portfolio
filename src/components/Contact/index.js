@@ -75,28 +75,29 @@ const Contact = () => {
             </form>
           </div>
         </div>
-        <div className="info-map">
-          <span className="name">Eric Shrader</span>
-          <br /> <br />
-          88 Kessel Ct <br />
-          Madison, Wisconsin 53711
-          <br />
-          Apartment 25 <br /> <br />
-          CDT - Central Daylight Time <br />
-          <span className="email">ericshrader101@gmail.com</span>
+
+        <div className="map-wrap right-side-container">
+          <MapContainer
+            center={[43.04936899680399, -89.48207538803734]}
+            zoom={13}
+            scrollWheelZoom={true}
+          >
+            <div className="info-map">
+              <span className="name">Eric Shrader</span>
+              <br /> <br />
+              88 Kessel Ct <br />
+              Madison, Wisconsin 53711
+              <br />
+              Apartment 25 <br /> <br />
+              CDT - Central Daylight Time <br />
+              <span className="email">ericshrader101@gmail.com</span>
+            </div>
+            <TileLayer url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" />
+            <Marker position={[43.04936899680399, -89.48207538803734]}>
+              <Popup>Eric lives here, come over for a cup of coffee</Popup>
+            </Marker>
+          </MapContainer>
         </div>
-      </div>
-      <div className="map-wrap">
-        <MapContainer
-          center={[43.04936899680399, -89.48207538803734]}
-          zoom={13}
-          scrollWheelZoom={true}
-        >
-          <TileLayer url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" />
-          <Marker position={[43.04936899680399, -89.48207538803734]}>
-            <Popup>Eric lives here, come over for a cup of coffee</Popup>
-          </Marker>
-        </MapContainer>
       </div>
       <Loader type="pacman" />
     </>

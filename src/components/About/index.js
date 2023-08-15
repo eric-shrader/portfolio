@@ -4,10 +4,10 @@ import AnimatedLetters from '../AnimatedLetters'
 import { useEffect, useState } from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {
-  faAngular,
   faCss3,
   faGitAlt,
   faHtml5,
+  faJava,
   faJsSquare,
   faReact,
 } from '@fortawesome/free-brands-svg-icons'
@@ -50,11 +50,10 @@ const About = () => {
             talents and experience.
           </p>
         </div>
-
-        <div className="stage-cube-cont">
+        <div className="stage-cube-cont right-side-container">
           <div className="cubespinner">
             <div className="face1">
-              <FontAwesomeIcon icon={faAngular} color="#DD0031" />
+              <FontAwesomeIcon icon={faJava} color="#5382a1" />
             </div>
             <div className="face2">
               <FontAwesomeIcon icon={faHtml5} color="#F06529" />

@@ -1,7 +1,14 @@
+.app {
+    display: grid;
+    grid-template-columns: 80px auto;
+    width: 100%;
+    min-height: 100%;
+    position: absolute;
+}
+
 .page {
     width: 100%;
-    height: 100%;
-    position: absolute;
+    min-height: 100%;
 }
 
 .top-tags {
@@ -24,15 +31,22 @@
 }
 
 .container {
+
+    //flex
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+
+    // block
     width: 100%;
-    will-change: contents;
-    height: 90%;
+    height: 100%;
     min-height: 566px;
-    position: absolute;
-    opacity: 0;
-    top: 5%;
     margin: 0 auto;
-    z-index: 1;
+
+    // animation
+    opacity: 0;
+    will-change: contents;
     transform-style: preserve-3d;
     animation: fadeIn 1s forwards;
     animation-delay: 1s;
@@ -41,14 +55,9 @@
 .about-page,
 .contact-page {
     .text-zone {
-        position: absolute;
-        left: 10%;
-        top: 50%;
-        transform: translateY(-50%);
         width: 35%;
-        vertical-align: middle;
-        display: table-cell;
         max-height: 90%;
+        margin: 40px 40px;
 
         h1 {
             font-size: 53px;
@@ -110,5 +119,11 @@
         &:hover {
             color: #fff;
         }
+    }
+}
+
+@media (max-width: 1500px) {
+    .right-side-container {
+        display: none;
     }
 }
