@@ -72,12 +72,12 @@
             }
 
             &::after{
-                content: '<h1>';
+                content: '</h1>';
                 font-family: 'La Belle Aurore';
                 font-size: 18px;
                 position: absolute;
                 margin-top: -10px;
-                left: -30px;
+                left: -10px;
                 bottom: -20px;
                 opacity: 0.6;
                 line-height: 18px;
