@@ -117,4 +117,12 @@
     .right-side-container {
         display: none;
     }
+
+    .about-page,
+    .contact-page {
+        .text-zone {
+            width: 60%;
+            margin: 40px 20px;
+        }
+    }
 }

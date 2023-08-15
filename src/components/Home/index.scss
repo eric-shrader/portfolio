@@ -48,6 +48,7 @@
     .flat-button {
         color: #ffd700;
         font-size: 13px;
+        text-align: center;
         font-weight: 400;
         letter-spacing: 4px;
         font-family: sans-serif;
@@ -69,6 +70,27 @@
         img {
             height: 700px;
             width: 400px;
+        }
+    }
+}
+
+@media (max-width: 600px) {
+    .right-side-container {
+        display: none;
+    }
+
+    .home-page {
+        .text-zone {
+            width: 80%;
+            margin: 40px 10px;
+
+            h1 {
+                font-size: 32px;
+            }
+            
+            h2 {
+                text-align: center;
+            }
         }
     }
 }

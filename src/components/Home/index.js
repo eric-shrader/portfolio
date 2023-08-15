@@ -42,21 +42,32 @@ const Home = () => {
           <div className="text-zone">
             <h1>
               <span className={letterClass}>H</span>
-              <span className={`${letterClass} _12`}>i,</span>
+              <span className={`${letterClass} _12`}>e</span>
+              <span className={`${letterClass} _13`}>l</span>
+              <span className={`${letterClass} _14`}>l</span>
+              <span className={`${letterClass} _15`}>o</span>
+              <span className={`${letterClass} _16`}>&nbsp;</span>
+              <span className={`${letterClass} _17`}>t</span>
+              <span className={`${letterClass} _18`}>h</span>
+              <span className={`${letterClass} _19`}>e</span>
+              <span className={`${letterClass} _20`}>r</span>
+              <span className={`${letterClass} _21`}>e,</span>
               <br />
-              <span className={`${letterClass} _13`}>I</span>
-              <span className={`${letterClass} _14`}>'m</span>
+              <span className={`${letterClass} _22`}>I</span>
+              <span className={`${letterClass} _23`}>'m</span>
               &nbsp;
               <AnimatedLetters
                 letterClass={letterClass}
                 strArray={nameArray}
-                idx={15}
+                idx={24}
               />
               <br />
+              <span className={`${letterClass} _36`}>a</span>
+              <span className={`${letterClass} _37`}>&nbsp;</span>
               <AnimatedLetters
                 letterClass={letterClass}
                 strArray={jobArray}
-                idx={27}
+                idx={38}
               />
             </h1>
             <h2>Full Stack Developer</h2>
@@ -65,7 +76,7 @@ const Home = () => {
             </Link>
           </div>
         </div>
-        <div className="left-side-container">
+        <div className="right-side-container">
           <div className="me-container">
             <img src={me} alt="image of eric shrader" />
           </div>
