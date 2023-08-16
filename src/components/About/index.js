@@ -120,8 +120,8 @@ const About = () => {
               link="https://aws.amazon.com/"
               name="AWS"
             >
-              this is amazon web services, a cloud computing platform I use to
-              deploy websites like these
+              Amazon Web Services is a cloud computing platform I use to deploy
+              websites like these
             </FlipCard>
           </div>
         </div>
