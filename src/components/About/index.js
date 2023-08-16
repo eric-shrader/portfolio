@@ -121,7 +121,7 @@ const About = () => {
               name="AWS"
             >
               this is amazon web services, a cloud computing platform I use to
-              deploy me websites
+              deploy websites like these
             </FlipCard>
           </div>
         </div>
