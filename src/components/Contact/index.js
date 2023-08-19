@@ -50,7 +50,7 @@ const Contact = () => {
             />
           </h1>
           <p>
-            I am interested in full time work oppurtunites - especially
+            I am interested in full time work opportunities - especially
             ambitious or large projects. However, if you have other requests or
             questions, don't hesitate to contact me using the form below.
           </p>
