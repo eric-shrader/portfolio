@@ -123,6 +123,33 @@ const About = () => {
               Amazon Web Services is a cloud computing platform I use to deploy
               websites like these
             </FlipCard>
+            <FlipCard
+              logo="faDocker"
+              color="#2496ed"
+              link="https://www.docker.com/"
+              name="Docker"
+            >
+              Docker lets me wrap my applications into a container that can be
+              shipped and deployed anywhere
+            </FlipCard>
+            <FlipCard
+              logo="faDharmachakra"
+              color="#306adf"
+              link="https://kubernetes.io/"
+              name="Kubernetes"
+            >
+              This is a container orchestration service that manages my
+              containers in production for me
+            </FlipCard>
+            <FlipCard
+              logo="faJenkins"
+              color="#d33833"
+              link="https://www.jenkins.io/"
+              name="Jenkins"
+            >
+              This is a CI/CD tool for creating automated pipelines for
+              building, testing, and deploying my applications
+            </FlipCard>
           </div>
         </div>
       </div>
