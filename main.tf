@@ -8,7 +8,7 @@ terraform {
 
   backend "s3" {
     bucket  = "eric-shrader-terraform-state"
-    key     = "terraform.tfstate"
+    key     = "eric-shrader.com/terraform.tfstate"
     region  = "us-east-2"
     encrypt = true
   }
