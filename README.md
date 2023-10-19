@@ -10,7 +10,7 @@ This project was created using react. I used react router dom for routing, font 
 
 ### Attribution
 
-this project was created using react. It was originally adapted from [Slobodan](https://github.com/bobangajicsm). Link to his project [here](https://github.com/bobangajicsm/react-portfolio-website). Big thanks to him
+This project was originally adapted from [Slobodan](https://github.com/bobangajicsm). Link to his project [here](https://github.com/bobangajicsm/react-portfolio-website). Big thanks to him
 
 ### Deployment
 
