@@ -17,6 +17,10 @@ terraform {
 provider "aws" {
   region = "us-east-2"
 }
+provider "aws" {
+  region = "us-east-1"
+  alias  = "us-east-1"
+}
 
 resource "aws_s3_bucket" "website_bucket" {
   bucket = "eric-shrader.com"
@@ -97,7 +101,7 @@ resource "aws_cloudfront_distribution" "s3_distribution" {
   is_ipv6_enabled     = true
   comment             = "distribution for eric-shrader.com"
   default_root_object = "index.html"
-  # aliases             = ["eric-shrader.com", "www.eric-shrader.com"]
+  aliases             = ["eric-shrader.com", "www.eric-shrader.com"]
 
   default_cache_behavior {
     allowed_methods  = ["DELETE", "GET", "HEAD", "OPTIONS", "PATCH", "POST", "PUT"]
@@ -119,7 +123,8 @@ resource "aws_cloudfront_distribution" "s3_distribution" {
   }
 
   viewer_certificate {
-    cloudfront_default_certificate = true
+    acm_certificate_arn = aws_acm_certificate.cert.arn
+    ssl_support_method  = "sni-only"
   }
 
   restrictions {
@@ -129,4 +134,34 @@ resource "aws_cloudfront_distribution" "s3_distribution" {
     }
   }
 
+}
+
+data "aws_route53_zone" "domain" {
+  zone_id = "Z0919946U4UOAHCWJEV2"
+}
+
+resource "aws_route53_record" "A-record" {
+  zone_id = data.aws_route53_zone.domain.zone_id
+  name    = "eric-shrader.com"
+  type    = "A"
+  alias {
+    name                   = aws_cloudfront_distribution.s3_distribution.domain_name
+    zone_id                = aws_cloudfront_distribution.s3_distribution.hosted_zone_id
+    evaluate_target_health = false
+  }
+}
+
+resource "aws_route53_record" "www-CNAME-record" {
+  zone_id = data.aws_route53_zone.domain.zone_id
+  name    = "www.eric-shrader.com"
+  type    = "CNAME"
+  ttl     = 300
+  records = ["eric-shrader.com"]
+}
+
+resource "aws_acm_certificate" "cert" {
+  provider                  = aws.us-east-1
+  domain_name               = "eric-shrader.com"
+  subject_alternative_names = ["www.eric-shrader.com"]
+  validation_method         = "DNS"
 }
