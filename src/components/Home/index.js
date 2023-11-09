@@ -77,7 +77,7 @@ const Home = () => {
         </div>
         <div className="right-side-container">
           <div className="me-container">
-            <img src={me} alt="image of eric shrader" />
+            <img src={me} alt="eric shrader" />
           </div>
         </div>
       </div>
